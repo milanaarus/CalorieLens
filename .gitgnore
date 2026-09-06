@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data and models (это очень важно!)
+data/
+*.h5
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+
+# Environment variables
+.env
+*.env
+
+# Frontend
+node_modules/
+dist/
+*.local
+
+# Docker
+*.pid
