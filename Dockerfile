@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=source /source/CalorieVision/backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY --from=source /source/CalorieVision/backend/app/ ./app/
-COPY food-objects.onnx food-grains.onnx ./models/
+COPY yolov8n.onnx ./models/yolov8n.onnx
 COPY --from=frontend /build/dist ./frontend-dist/
 RUN useradd --create-home --uid 10001 calorievision
 USER calorievision
