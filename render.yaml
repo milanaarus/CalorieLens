@@ -1,0 +1,45 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "calorievision",
+      "runtime": "docker",
+      "plan": "free",
+      "region": "frankfurt",
+      "branch": "main",
+      "dockerfilePath": "./Dockerfile",
+      "healthCheckPath": "/health",
+      "envVars": [
+        {
+          "key": "SECRET_KEY",
+          "generateValue": true
+        },
+        {
+          "key": "DATABASE_URL",
+          "fromDatabase": {
+            "name": "calorievision-db",
+            "property": "connectionString"
+          }
+        },
+        {
+          "key": "OFF_USER_AGENT",
+          "value": "CalorieVision/1.1 (https://github.com/milanaarus/CalorieLens)"
+        },
+        {
+          "key": "NUTRITION_CACHE_PATH",
+          "value": "/tmp/calorievision/nutrition-cache.sqlite3"
+        }
+      ]
+    }
+  ],
+  "databases": [
+    {
+      "name": "calorievision-db",
+      "plan": "free",
+      "region": "frankfurt",
+      "databaseName": "calorievision",
+      "user": "calorievision",
+      "ipAllowList": []
+    }
+  ]
+}
