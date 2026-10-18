@@ -1,3 +1,5 @@
 *
 !Dockerfile
 !CalorieVision-source.zip
+!food-objects.onnx
+!food-grains.onnx
