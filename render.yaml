@@ -28,6 +28,10 @@
         {
           "key": "NUTRITION_CACHE_PATH",
           "value": "/tmp/calorievision/nutrition-cache.sqlite3"
+        },
+        {
+          "key": "CV_IMAGE_SIZE",
+          "value": "320"
         }
       ]
     }
